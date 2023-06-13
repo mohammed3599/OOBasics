@@ -9,17 +9,31 @@ namespace OOBasics
     internal class Student
     {
         public string name;
-        public string grade;
+        public string lastGrade;
         public long id;
         public string registerationNumber;
 
         public Student(string name, string grade, long id, string registerationNumber)
         {
             this.name = name;
-            this.grade = grade;
+            this.lastGrade = grade;
             this.id = id;
             this.registerationNumber = registerationNumber;
             printStudentDetails();
+        }
+
+        //public Student(string name, long id, string registerationNumber)
+        //{
+        //    this.name = name;
+        //    this.lastGrade = null;
+        //    this.id = id;
+        //    this.registerationNumber = registerationNumber;
+        //    printStudentDetails();
+        //}
+
+        public Student(string name, long id, string registerationNumber) : this(name, null, id, registerationNumber)
+        {
+            status();
         }
 
         public void status()
